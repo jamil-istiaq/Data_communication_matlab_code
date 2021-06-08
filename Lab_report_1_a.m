@@ -1,0 +1,14 @@
+A1=18;
+A2=82;
+j1=78*(pi/180);
+j2=89*(pi/180);
+t=0:pi/100:2*pi;
+x1=A1*cos((2*pi*3791*t)+j1);
+plot(t,x1,'r','linewidth',2);
+hold on;
+x2=A2*cos((2*pi*3791*t)+j2);
+plot(t,x2,'b','linewidth',2);
+hold on;
+title("Plotting a graph");
+xlabel("time");
+ylabel("amp");
