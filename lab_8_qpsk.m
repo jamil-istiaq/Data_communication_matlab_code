@@ -1,14 +1,15 @@
 close all;
 clc;
-f=10;
-x=[0 0 1 1 0 1 1 1 0 0 1 1 1 0 0 1 0 0 1 1 0 0 0 1];
+f=1837;
+y = 'test.jpg';
+x=img2bn(y);
 x = reshape(x,2,[])
 x1=x(1:2:end,:)
 x2=x(2:2:end,:)
 nx=size(x,2);
 i=1;
 while i<nx+1
-t = i:0.001:i+1;
+t = i:0.01:i+1;
 if x1(i)==1
 psk1=sin(2*pi*f*t);
 psk2=sin(2*pi*f*t+pi+pi/2);

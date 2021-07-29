@@ -1,10 +1,17 @@
-close all;
 clc;
+clear all;
+close all;
 f=10;
-x=[0 0 1 1 0 1 1 1 0 0 1 1 1 0 0 1 0 0 1 1 0 0 0 1];
+Transmitted_Message= 'Red'
+%Converting Information Message to bit%
+x=asc2bn(Transmitted_Message); % Binary Information
+bp=.000001; % bit period
+disp(' Binary information at Trans mitter :');
+disp(x);
 x = reshape(x,2,[])
 x1=x(1:2:end,:)
 x2=x(2:2:end,:)
+
 nx=size(x,2);
 i=1;
 while i<nx+1
@@ -37,3 +44,4 @@ axis([1 4 -2 2]);
 title('QPSK')
 i=i+1;
 end
+
